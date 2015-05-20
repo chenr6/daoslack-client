@@ -1,4 +1,5 @@
-var socket = require('socket.io-client')('http://192.168.59.103:32769');
+var server = process.env.SOCKET || 'http://127.0.0.1:3000';
+var socket = require('socket.io-client')(server);
 var faker = require('faker');
 var username = faker.name.findName();
 
